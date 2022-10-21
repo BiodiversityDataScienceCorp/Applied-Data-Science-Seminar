@@ -1,14 +1,14 @@
 ## Repository for Making Species Occurrence and Distribution maps for the Showy Milkweed (*Asclepias speciosa*)
 ### Maxine Cruz, Caelan Wilkie-Rogers, and Deanna Sunnergren
 
-![](https://github.com/BiodiversityDataScienceCorp/milkfli-mapping/blob/main/Photos/butterfly-gcb28d2610_1280.jpg)
+![](Photos/butterfly-gcb28d2610_1280.jpg)
 
 ## 🦋 Overview
-The **Showy Milkweed (*Asclepias speciosa*)** is one of various host plants to monarch butterflies (*Danaus plexippus*: Nymphalidae). Monarch populations have been observed to be declining at an average rate, with respect to other butterfly species, in the United States. However, the number of migratory individuals that return from overwintering sites has also been declining -- likely as a result of climate change. Plants, of course, are also affected by this change. Therefore, understanding the occurrences and distribution of monarch host plants may be key in their long-term conservation efforts. 
+The **Showy Milkweed (*Asclepias speciosa*)** is one of various host plants to monarch butterflies (*Danaus plexippus*: Nymphalidae). Monarch populations have been observed to be declining at an average rate, with respect to other butterfly species, in the United States. However, the number of migratory individuals that return from overwintering sites has also been declining -- likely as a result of climate change. Plants, of course, are also affected by this change. Therefore, understanding the occurrences and distribution of monarch host plants may be key in their long-term conservation efforts.
 
-This repository serves to examine occurrences and the current and future distributions of the **Showy Milkweed** populations in North America. Data from the Global Biodiversity Information Facility (GBIF), an open-access source of biodiversity data from several sources (including, but not limited to, iNaturalist, USGS, and museum collections), was utilized in this project. 
+This repository serves to examine occurrences and the current and future distributions of the **Showy Milkweed** populations in North America. Data from the Global Biodiversity Information Facility (GBIF), an open-access source of biodiversity data from several sources (including, but not limited to, iNaturalist, USGS, and museum collections), was utilized in this project.
 
-A [Species Status Assessment](https://github.com/BiodiversityDataScienceCorp/milkfli-mapping/blob/main/Asclepias_speciosa_SSA.md) of the Showy Milkweed was created and resides in the Outputs folder of this repository. This document contains information on the species, data cleaning process, and generated occurrence and distribution maps. At the end of the day, this repository is a documentation of the methods and analysis used towards Showy Milkweed data.
+A [Species Status Assessment](Asclepias_speciosa_SSA.md) of the Showy Milkweed was created and resides in the Outputs folder of this repository. This document contains information on the species, data cleaning process, and generated occurrence and distribution maps. At the end of the day, this repository is a documentation of the methods and analysis used towards Showy Milkweed data.
 
 Many thanks to Jeff Oliver for the code used in species distribution modelling! This borrowed code can be found at [https://github.com/jcoliver/biodiversity-sdm-lesson](https://github.com/jcoliver/biodiversity-sdm-lesson).
 
@@ -31,7 +31,7 @@ The following additional R packages are required (these will be installed when r
 (If running code through RStudio Cloud, these can be installed by running `install-packages-and-libraries.R`.)
 
 ## 📂 Structure
-### **Asclepias_speciosa_SSA.md:** 
+### **Asclepias_speciosa_SSA.md:**
   + Species Status Assessment for the Showy Milkweed (*Asclepias speciosa*)
 ### **Data:** Contains data used for occurrence and distribution maps
   + `A_speciosa.csv`: Data harvested from [GBIF](https://www.gbif.org/) for Showy Milkweed (*A. speciosa*). This dataset is not under version control, but will be harvested by running `main.R`. Same as showy_milkweed.csv, but is used for SDM maps -- filtered to data from 2019 ad 2020 (but this can be changed).
@@ -71,5 +71,3 @@ The code used in this project is in R script. Therefore, there are two options a
 2) Run `install-packages-and-libraries.R`. This installs and loads all necessary libraries for generating all maps.
 3) For an occurrence map, run `A_speciosa_occurrence_map.R`.
 4) For a current and/or forecast estimate species distribution map, run `A_speciosa_distribution_maps.R`.
-
-
