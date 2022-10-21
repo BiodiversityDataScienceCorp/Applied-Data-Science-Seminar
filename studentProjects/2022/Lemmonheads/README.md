@@ -4,7 +4,7 @@
 
 This repository draws on data from GBIF to create distribution models of the monarch butterfly host species, *Asclepias Lemmonii* (Lemmon's Milkweed). The code creates an occurrence map, species distribution model, and climate forecast model for this species of milkweed.
 
-Link to [Species Status Assessment](https://github.com/BiodiversityDataScienceCorp/lemmonheads-mapping/blob/main/SSA-asclepias-lemmonii.md).
+Link to [Species Status Assessment](SSA-asclepias-lemmonii.md).
 
 Thank you to Jeff Oliver, from whom we have [borrowed code](https://github.com/jcoliver/biodiversity-sdm-lesson).
 
@@ -33,7 +33,7 @@ The following additional R packages are required (these will be installed by run
 -   #### output: directory containing image outputs
     - lemmonii-single-prediction.pdf: SDF with both current and future data
     - lemmonii-single-current-future-sdm.jpg: SDM with both current and future data
-    - occurence_map.jpg: occurrence map 
+    - occurence_map.jpg: occurrence map
     - sdm.jpg: screenshot of SDM
 -   #### src: directory containing R scripts for gathering occurrence data, running forecast models, and creating map outputs.
     -   main.R: creates an occurence map, SDM, and SDF
@@ -45,7 +45,7 @@ The following additional R packages are required (these will be installed by run
 
 ## Running the code
 
-1.  Copy the URL to this lemmonheads-mapping Github repository by clicking on the green "Code" button above 
+1.  Copy the URL to this lemmonheads-mapping Github repository by clicking on the green "Code" button above
 2.  Clone the repository by opening a "New Project from Git Repository" in RStudio or rstudio.cloud and pasting the URL
 
 3.  Open main.R
