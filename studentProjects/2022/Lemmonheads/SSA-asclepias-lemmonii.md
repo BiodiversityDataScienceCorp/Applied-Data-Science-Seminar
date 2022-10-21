@@ -36,7 +36,7 @@ Lemmon's milkweed is found at elevations ranging from 1200-2100 meters. It gener
 There are no studies specifically on what species Lemmon's milkweed is a larval host for. Generally, milkweed species are known to be larval hosts for monarch butterflies. This is not the only species they're a host for. Milkweeds are also larval hosts for other butterflies and moths such as Dogbane Tiger moth (Cycnia tenera) and the Queen Butterfly (Danaus gilippus)<sup>4</sup>.
 
 ## Conservation Efforts:
-There is no evidence of past conservation efforts specifically focused on this species of milkweed. From species occurrence maps, it can be seen that this species is located primarily in natural regions away from urbanization in Arizona. Thus, this is not a species likely to be planted by citizens or botanical gardens in their effort to preserve milkweed species for monarch butterflies. 
+There is no evidence of past conservation efforts specifically focused on this species of milkweed. From species occurrence maps, it can be seen that this species is located primarily in natural regions away from urbanization in Arizona. Thus, this is not a species likely to be planted by citizens or botanical gardens in their effort to preserve milkweed species for monarch butterflies.
 
 ## Data Sources
 
@@ -54,7 +54,7 @@ The data set queried from GBIF was checked to ensure it had all relevant informa
 
 ## Species Occurrence Map
 
-![Species Occurrence Map](https://raw.githubusercontent.com/BiodiversityDataScienceCorp/lemmonheads-mapping/main/output/occurence_map.jpg)
+![Species Occurrence Map](output/occurence_map.jpg)
 
 ## Species Distribution Modeling
 
@@ -66,7 +66,7 @@ Species Distribution Models (SDMs) are used to understand what environmental con
 
 Our SDM was made using recorded species occurrence data and environmental data. For each location where the species was documented, information on the environmental variables were considered. Using this information, the model visualizes suitable environments for our species.
 
-![SDM](https://raw.githubusercontent.com/BiodiversityDataScienceCorp/lemmonheads-mapping/main/output/sdm.jpg)
+![SDM](output/sdm.jpg)
 
 ## Species Distribution Forecast Estimation
 
@@ -78,11 +78,11 @@ Species Distribution Forecasts (SDFs) use species distribution models and future
 
 Our SDF was made using recorded species occurrence data in conjunction with the previously mentioned environmental data and climate data from WorldClim. The software used climate forecasting to predict how a changing climate will impact environmental factors geographically. This allowed us to use the current habitat requirements of our species to estimate where these requirements will be met after climate changes have occurred. The final model visualizes areas of future suitability, allowing us to see where the species will likely exist in the future and how different this is from the current species distribution.
 
-![SDF](https://raw.githubusercontent.com/BiodiversityDataScienceCorp/lemmonheads-mapping/main/output/lemmonii-single-current-future-sdm.jpg)
+![SDF](output/lemmonii-single-current-future-sdm.jpg)
 
 ## Summary of Findings
 
-Lemmonii milkweed are currently observed and recorded across what appears to be the West Sierra Madre Occidental mountain range of Mexico and the southwest corner of Arizona (specifically the Chiricahua Mountain Range and the Huachuca Mountain Range). Based on our climate indicators, we predict that the species will decrease in range and density throughout its distribution, especially in Arizona. Moreover, suitable regions will become increasingly isolated with large gaps in between. These areas will be where elevation is high enough to sustain the climate necessary for *lemmonii* growth. These factors are likely to create strain for migrating Monarch butterflies that rely on this milkweed species as a food source. This change in the species distribution is likely to create strain for migrating Monarch butterflies that rely on this milkweed species as a nectar food source, especially on their return journey from migration. 
+Lemmonii milkweed are currently observed and recorded across what appears to be the West Sierra Madre Occidental mountain range of Mexico and the southwest corner of Arizona (specifically the Chiricahua Mountain Range and the Huachuca Mountain Range). Based on our climate indicators, we predict that the species will decrease in range and density throughout its distribution, especially in Arizona. Moreover, suitable regions will become increasingly isolated with large gaps in between. These areas will be where elevation is high enough to sustain the climate necessary for *lemmonii* growth. These factors are likely to create strain for migrating Monarch butterflies that rely on this milkweed species as a food source. This change in the species distribution is likely to create strain for migrating Monarch butterflies that rely on this milkweed species as a nectar food source, especially on their return journey from migration.
 
 ## Recommendations
 In monarch butterfly conservation efforts, we do not believe that the Lemmon’s milkweed should be considered a priority when compared to other milkweed species. Due to its already small occurrence count and its shrinking habitat range, the Lemmon’s milkweed will likely be unable to sustainably support migrating monarchs. However, if there is a conservation effort focused on this species, priority should be given to preservation of its current habitat, and the preservation of its forecasted habitat range. Given that the Lemmon’s milkweed’s range is forecasted to move farther south into Mexico, a conservation effort would be more effective in Mexico than in Arizona.  
@@ -100,5 +100,3 @@ In monarch butterfly conservation efforts, we do not believe that the Lemmon’s
 ### 4. [Xerces](https://www.xerces.org/sites/default/files/2018-05/17-031_02_XercesSoc_Milkweeds-Conservation-Guide_web.pdf)
 
 ### 5. [GBIF](https://www.gbif.org/species/3170287)
-
-
