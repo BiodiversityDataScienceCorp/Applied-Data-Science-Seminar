@@ -1,5 +1,5 @@
 ## Overview
-This project aims to support Monarch butterfly conservation by modeling a species of milkweed in the southwest of North America. Using publicly available occurence data of the horsetail milkweed species (*Asclepius subverticillata*) from GBIF and iNaturalist, as well as and future climate data, we forecast current and future distribution of the horsetail milkweed. These deliverables are contained in this [Species Status Assessment (SSA)](https://github.com/BiodiversityDataScienceCorp/Spidertail-Mapping/blob/main/SSA-Asclepias-subverticillata.md)
+This project aims to support Monarch butterfly conservation by modeling a species of milkweed in the southwest of North America. Using publicly available occurence data of the horsetail milkweed species (*Asclepius subverticillata*) from GBIF and iNaturalist, as well as and future climate data, we forecast current and future distribution of the horsetail milkweed. These deliverables are contained in this [Species Status Assessment (SSA)](main/SSA-Asclepias-subverticillata.md)
 
 Some code described below is borrowed from Jeff Oliver [https://github.com/jcoliver/biodiversity-sdm-lesson](https://github.com/jcoliver/biodiversity-sdm-lesson).
 
@@ -33,7 +33,7 @@ The following additional R packages are required (these will be installed by run
   + **speciesDistributionModel.R**: contains the code that runs horsetail-sdm-single.R and produces the current species distribution model map
 
 ## Running the code
-Instructions to clone this repository, run the code, and replicate the output. 
+Instructions to clone this repository, run the code, and replicate the output.
  1. Copy the URL to this Spidertail-Mapping Github repository by clicking on the green "Code" button above
  2. Clone the repository by opening a "New Project from Git Repository" in rstudio or rstudio.cloud and pasting the URL
  3. Run scripts in the src folder in the following order:

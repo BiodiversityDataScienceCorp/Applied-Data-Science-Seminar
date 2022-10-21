@@ -1,11 +1,11 @@
 # Pineneedle readme
 ## Overview
 - Creating Species Occurence Maps and Species Distribution Models for Species Status Assessment of Monarch Butterflies
-- [Species Status Assessment Asclepias linaria](https://github.com/BiodiversityDataScienceCorp/Pineneedles-main-repo/blob/d58107fdebd9162250135d2f8705416b4cc4ae2a/Asclepias-linaria-SSA.md)
+- [Species Status Assessment Asclepias linaria](Asclepias-linaria-SSA.md)
 - Team Pineneedle (Claire, Mila, Moritz), Spring 2022
 - With the help of code by Jeff Oliver https://github.com/jcoliver/biodiversity-sdm-lesson
 
-## Dependencies 
+## Dependencies
 The following  R packages are required (these will be installed by running the setup script, src/setup.R):
 - raster
 - sp
@@ -35,7 +35,7 @@ The following  R packages are required (these will be installed by running the s
   + sdm-functions.R: this prepares the data to be used for creating a SDM
   + linaria-sdm-single.R: this creates a SDM for current climate conditions
   + linaria-future-sdm-single.R: this creates a SDM for 2070 climate conditions
- 
+
 
 ## Running the code
 - open the src/main.R document
@@ -43,8 +43,6 @@ The following  R packages are required (these will be installed by running the s
 - run the rest of the main.R document (consider runnning the last two lines of code, source "src/linaria-sdm-single.R" and source "src/linaria-future-sdm-single.R", seperately)
 - the created maps will be in the output folder
 
-## Project DOI 
+## Project DOI
 
 [![DOI](https://zenodo.org/badge/459737484.svg)](https://zenodo.org/badge/latestdoi/459737484)
-
-

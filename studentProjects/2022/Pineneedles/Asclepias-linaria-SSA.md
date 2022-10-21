@@ -18,14 +18,14 @@
 ## Species Description:
 *A. linaria* is a rare milkweed species in the US, but common and found throughout
 Mexico. It can grow up to 4 feet tall, but is typically around 2 feet tall.
-It flowers in the spring and summer annually. It has small, white flowers, woody stems, and needle-shaped leaves. Small plants are sometimes mistaken for juvenile pine trees. It is readily availble for commercial planting in the desert Southwest. 
+It flowers in the spring and summer annually. It has small, white flowers, woody stems, and needle-shaped leaves. Small plants are sometimes mistaken for juvenile pine trees. It is readily availble for commercial planting in the desert Southwest.
 
 ## Habitat Description:
 - Dry rocky slopes and mesas
 - elevation: 1500-6000ft
 
 ## Larval Host Information:
-It is known to be a host plant for monarch butterflies, Queen Butterflies (will feed on other wildflowers instead) and other pollinators. However, it is used only occasionally due to its relative toxicity (Nabhan et al., 2015). In a study comparing *A. linaria* with *A. angustifolia*, another native milkweed to Arizona, female monarchs preferred to lay on *A. angustifolia*, had greater larvae survival rates, faster larval development, and reached a larger adult size on *A. angustifolia*. However, this leaves many other milkweed species unevaluated, with uncertaintiy as to if *A. linaria* would be preferred compared with others (Pegram and Melkonoff, 2019). Additionally, unpublished data shows that five times more honeybees, *Apis mellifera*, visited *A. linaria* than *D. plexippus* (Pegram and Melkonoff, 2019). 
+It is known to be a host plant for monarch butterflies, Queen Butterflies (will feed on other wildflowers instead) and other pollinators. However, it is used only occasionally due to its relative toxicity (Nabhan et al., 2015). In a study comparing *A. linaria* with *A. angustifolia*, another native milkweed to Arizona, female monarchs preferred to lay on *A. angustifolia*, had greater larvae survival rates, faster larval development, and reached a larger adult size on *A. angustifolia*. However, this leaves many other milkweed species unevaluated, with uncertaintiy as to if *A. linaria* would be preferred compared with others (Pegram and Melkonoff, 2019). Additionally, unpublished data shows that five times more honeybees, *Apis mellifera*, visited *A. linaria* than *D. plexippus* (Pegram and Melkonoff, 2019).
 
 ## Data Sources for Occurence and Distribution Modeling:
 Sourced on April 14, 2022
@@ -40,7 +40,7 @@ We removed all data that had
 
 ## Species Occurence Map
 
-![Occurence Map](output/pineneedleMilkweedspocc.jpg) 
+![Occurence Map](output/pineneedleMilkweedspocc.jpg)
 
 #### Link to GitHub Repository [Here](https://github.com/BiodiversityDataScienceCorp/Pineneedles-main-repo)
 
@@ -54,7 +54,7 @@ We removed all data that had
 ### Description of Future SDM
 - The Future Species Disribution Model map uses Worldclim forcast climate data for the year 2070 based on the GFDL-ESM2G model with an RCP of 4.5 CO<sub>2</sub>. The light blue points represent the current species occurences for Pineneedle Milkweed for the years 1950-2020. The dark grey represents the Species Disripution Model projections for the year 2070.
 ### Methods for Future SDM
-- Uses forcast climate data from Worldclim and the GFDL-ESM2G model for the year 2070. 
+- Uses forcast climate data from Worldclim and the GFDL-ESM2G model for the year 2070.
 ![SDMfuture](output/linaria-single-future-sdm.jpg)
 
 ### Current and Future SDM in Arizona
@@ -74,6 +74,6 @@ We removed all data that had
 ###### References:
 Nabhan, G., S. Buckley, and H. Dial. 2015. Pollinator Plants of the Desert Southwest: Native
 Milkweeds (Asclepias spp.). USDA-Natural Resources Conservation Service, Tucson Plant
-Materials Center, Tucson, AZ. TN-PM-16-1-AZ. 
+Materials Center, Tucson, AZ. TN-PM-16-1-AZ.
 
 Pegram, Kimberly V, and Natalie A Melkonoff. "Assessing Preference and Survival of Danaus Plexippus on Two Western Species of Asclepias." Journal of Insect Conservation 24, no. 2 (2019): 287-95.
