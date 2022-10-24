@@ -1,0 +1,259 @@
+---
+title: "R Introduction/Refresher, January 2022"
+
+output:
+  pdf_document: default
+
+---
+
+Your Name Here  
+DSCI 245 / RNR 620  
+January 18th, 2022  
+
+
+
+## R Introduction/Refresher, January 2022
+
+
+### Learning outcomes:
+* Know how to assign a variable in R.
+* Understand what a vector is in R.
+* Use the "library" function to load packages.
+* Become familiar with functions and arguments, where to find them, and how to get help.
+* Understand how to load external data into rstudio.cloud, and assign it to a variable in R.
+* Know the syntax for accessing a column of data as a vector.
+
+
+Before diving in, you might be wondering what's up with the weird syntax of this document. It's "R Markdown", which is a shorthand for creating formatted text in documents. One of the neat things about R Notebooks (like this document) is that you can "knit" it to an output like PDF or HTML. Once you run through all the code in this exercise, click the "Knit" button above, and take a look at the output (this is part of the requirements for this assignment, as described in the README.md file). 
+
+
+### Basic R code
+
+R code can be run in the console, or as a "code chunk" within this R notebook. Below is a code chunk. You can run the code chunk by clicking the green "play" button.
+
+```{r}
+2+2
+```
+
+Throughout this workshop, there will be a mix of code chunks pre-populated with code, and empty code chunks. The empty code chunks give you an opportunity to write code, run it, and see the output. Each of the empty chunks are preceded with "YOUR TURN:".
+
+### Assigning variables
+
+Creating variables in R isn't so bad. Most scripting languages use the "=" sign, but R uses "<-". So below, I'm creating a variable x, and setting it equal to 10. Afterward, I entered "x", which should output the value of x:
+
+```{r}
+
+#Anything preceded by a "#" is a "comment". It does not get executed as code.
+#Comments can be super helpful to provide info on your code.
+
+# assigns 10 to x
+x<-10
+
+# prints x
+x
+
+
+
+```
+
+
+**YOUR TURN**  
+Now try creating a variable "y", set it equal to 7+9, and then print it out:
+```{r}
+
+
+```
+
+
+
+**YOUR TURN**  
+Create a variable "numButterflies", set it equal to 500, and print it out:
+
+```{r}
+
+
+
+```
+
+
+
+
+### Vectors (aka "Arrays")
+
+Vectors are a type of data structure in R, usually referring to an array of values. To create a vector, you use the "c" function:
+
+```{r}
+myFirstVector<-c(4, 8, 5, 12, 1, 6)
+#print myFirstVector
+myFirstVector
+```
+
+
+**YOUR TURN**  
+Create a vector named "observations", and have it contain the values 27, 61, 48, 115, and 50. Display it to the screen.
+
+```{r}
+#enter your code here
+
+
+
+```
+
+
+
+## Functions
+
+Like most languages, R has functions that help you quickly execute common tasks. Functions typically take the form of:
+
+functionName(argument1, argument2, etc....)
+
+For example, the function sqrt(number) takes the square root of a number:
+
+```{r}
+sqrt(9)
+```
+
+
+**YOUR TURN**  
+In the chunk below, create a variable 'z', set it equal to the square root of 90, and print it out:
+```{r}
+
+
+```
+
+One nice thing about RStudio Server is that you can readily access documentation for functions by using the "help" command:
+
+```{r}
+help(sqrt)
+```
+
+The documentation appears in the lower right window in the "help" tab.
+
+
+The internet in general is also an excellent source for getting help with R functions. Not only can you find examples and documentation on functions, but it's also a great way to determine what functions exist. 
+
+Say we're interested in calculating the standard deviation of a set of values (e.g. a vector). Surely R must have a function for this!
+So let's google "r calculate standard deviation", and see what we get. 
+
+It turns out the sd() is the R function for standard deviation. Let's use it to calculate the standard deviation of myFirstVector below:
+
+```{r}
+
+mfvSd<-sd(myFirstVector)
+
+mfvSd
+
+```
+
+
+
+**YOUR TURN**  
+Lets say you want to calculate the average of the vector "observations" you just created, but aren't sure how. Try googling "how do I calculate the average in R". Based on what you find, calculate the average of "observations", and print it to the screen:
+
+
+```{r}
+# hint: once you find the right function, you'll use "observations" as your argument
+
+
+
+```
+
+
+
+
+
+
+## Working with Data
+
+Before loading data, we're first going to load a library called the "tidyverse". We're doing this because we're about to use the "read_csv" function, which is only available once the tidyverse is loaded (we know this from googling). 
+
+```{r message = FALSE }
+library(tidyverse)
+```
+
+
+
+### Loading data from the files area
+
+Each user on our RStudio Server instance has a home directory, where you can keep various files, R Projects, etc. You can view your files in the lower right-hand window, under the "Files" tab.
+
+You should see a file called "monarchsArizona.csv". This is a data set exported from iNaturalist containing research-level Monarch butterly observations in Arizona during 2021 (source - iNaturalist export tool https://www.inaturalist.org/observations/export)
+
+Below, you can use the "read_csv" function to open a dataset, and assign it to a variable (in this case, "mmonarchsAz"):
+
+
+```{r message = FALSE }
+# The "read_csv" function is part of the "readr" package, which is part of the tidyverse.
+monarchsAz<-read_csv("monarchsArizona.csv")
+monarchsAz
+```
+
+
+
+
+### Loading external data from Google Sheets
+
+The following URL contains iNaturalist data of all research-grade butterfly observations in Oregon for 2021 (source: iNaturalist export tool):
+
+https://docs.google.com/spreadsheets/d/1FeFA2Sp2MkXbMthNqxHKh1S3-BPEpkfIRFPob1pDFns/edit?usp=sharing
+
+
+**YOUR TURN**  
+Perform the following steps to load the data set into rstudio.cloud, and examine the data by assigning it to a variable and display it to the screen:
+
+* Visit https://docs.google.com/spreadsheets/d/1FeFA2Sp2MkXbMthNqxHKh1S3-BPEpkfIRFPob1pDFns/edit?usp=sharing
+* In the File menu, select Download, and select Comma Separated Values. This will download the file to your computer.
+* In rstudio.cloud, in the Files tab of the lower-right window, click 'Upload'.
+* Click 'Choose File', and find the downloaded file on your computer (click 'Open', then 'Ok').
+* The file should now appear in your Files area. 
+* In the code chunk below, use the read_csv function to assign the data set to a variable, and then print the data to tbe screen (hint: prior to writing any code, you might consider renaming the file to something simple, by clicking the checkbok next to the file, and clicking 'Rename'):
+
+```{r message = FALSE }
+
+
+
+
+
+
+```
+
+
+### Accessing a column of data
+
+There will likely be cases where you want to isolate a column of data to perform some calculation on it. Fortunately you can do this pretty easily, using the "$" operator. The sytax is:
+
+dataSet$columnName
+
+For example, let's say were interested in getting the "num_identification_agreements" column from the monarchsAz data set. The following code let's us do it:
+
+```{r}
+# 
+numIdAg<-monarchsAz$num_identification_agreements
+
+
+numIdAg
+
+
+```
+
+We just created a vector of data, which we could theoretically then use to do other calculations (mean, standard deviation, etc.)
+
+
+**YOUR TURN**  
+Use the Oregon butterly data set you loaded, and create a variable equal to the column "num_identification_disagreements". Display it to the screen.
+
+```{r}
+
+
+
+
+```
+
+
+
+
+You've reached the end! Please refer to README.md for specifics on turning in this assignment. It must be submitted by midnight on Monday, January 24th, 2022.
+
+Questions? Ask Jeremy at jeremym@lclark.edu.
+
+
