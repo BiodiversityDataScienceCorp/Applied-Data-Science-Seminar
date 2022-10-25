@@ -1,0 +1,118 @@
+---
+title: "Querying GBIF data from rstudio.cloud"
+output: pdf_document
+---
+
+Your Name Here  
+DSCI 245 / RNR 496B  
+January 25th, 2022  
+
+## Querying Data from GBIF
+
+
+### Learning Outcomes 
+* Gain some familiarity with GBIF.
+* Learn how to query data from GBIF with R code.
+* Learn how you might use arguments to better target the data you want.
+
+
+### Application Programming Interfaces (API)
+
+Perhaps one of the best things about the internet is the existence of APIs. An API is basically a way to programmatically ask for data from a particular data source, provided you follow their rules (i.e. read their documentation).
+
+A very common way to do this is by asking a question with a URL, and getting a response in some data format (XML, JSON, an image, etc.).
+
+One basic example is the "Dog API" (https://dog.ceo/dog-api/). From reading their documentation, I can ask for a random image of a Cocker Spaniel with this URL:
+
+https://dog.ceo/api/breed/spaniel/cocker/images/random
+
+The response is a JSON (JavaScript Object Notation), which includes the URL of an image of a Cocker Spaniel. Neat!
+
+
+You may be asking "so what?". Well, with the existence of APIs, we can query data sets directly from rstudio.cloud, and then write R code to work with it. This can be a little more efficient than the "download/upload" method we did last week. 
+
+
+
+### GBIF
+
+GBIF (Global Biodiversity Information Facility) "is an international network and data infrastructure funded by the world's governments and aimed at providing anyone, anywhere, open access to data about all types of life on Earth." Academics performing research on species distribution can upload their data to GBIF using the "Darwin Core" metadata standard (https://dwc.tdwg.org/). This means that when researchers upload their data, they're all using the same fields. What is the value in doing this?
+
+GBIF also provides an API, so people can programmatically query data with code. Even better, developers at "rOpenSci" have created an R package call spocc (SPecies OCCurrence) that lets you directly query data from within rstudio.cloud.
+
+### Using spocc to query GBIF
+
+The spocc package has a number of different functions, all of which are documented here: https://docs.ropensci.org/spocc/reference/index.html
+
+One of the primary functions we'll use is "occ()" (for "occurrences"). 
+
+Let's run it and see what happends:
+```{r}
+occ()
+```
+
+Just kidding! It won't work until we load the "spocc" package, using the "library()" function:
+
+
+```{r}
+library(spocc)
+
+```
+
+Let's take a quick look at the documentation for the "occ()" function:
+https://docs.ropensci.org/spocc/reference/occ.html
+
+Unlike simple functions (remember sqrt() from last time), occ() can take 19 different arguments. Because there are so many, we need to get in the habit of being explicit about our arguments, so R knows which ones we're using.
+
+Here is a query for the first 1000 occurrences of Danaus plexippus from GBIF:
+
+```{r}
+
+# Notice the explicit arguments: query='Danaus plexippus', instead of just 'Danaus plexippus'
+# When using explicit arguments, we must match the argument name from the documentation (query, from, limit, etc.)
+
+monarchs <- occ(query='Danaus plexippus', from='gbif', limit=1000)
+
+monarchs
+
+
+```
+
+So our result initially doesn't look like much, but there's actually a lot in there. It's an "object", meaning it has attributes containing more values. We can dig deeper using the "$" operator.
+
+The output above gives us some hints on how to access it. The rstudio autofill is also really helpful.
+
+```{r}
+monarchsGbif<-monarchs$gbif$data$Danaus_plexippus
+
+monarchsGbif
+```
+
+
+Questions to consider:
+
+How might you get Monarch data using a source other than gbif?
+
+How might you get Monarch occurrences from gbif just in the state of Arizona?
+
+How might you get Monarch occurrences from gbif in Arizona for just the year 2021?
+
+
+The answers all lie in the documentation (https://docs.ropensci.org/spocc/reference/occ.html). Only by reading the documentation can you understand how to query the exact data you need.
+
+
+YOUR TURN:
+
+Try answering the questions above. Use comments to describe what you're doing.
+
+```{r}
+
+
+
+
+
+
+```
+
+
+
+
